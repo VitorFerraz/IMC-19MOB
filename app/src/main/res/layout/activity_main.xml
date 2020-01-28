@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5"
+        android:background="#99c8d0"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculadora IMC"
+            android:textAlignment="center"
+            android:textColor="#FFF"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    style="@style/label_form"
+                    android:text="Peso(Kg)" />
+
+                <TextView
+                    style="@style/label_form"
+                    android:text="Altura(m)" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp">
+
+                <EditText
+                    android:id="@+id/etPeso"
+                    style="@style/input_form"
+                    android:layout_marginEnd="8dp"
+                    android:inputType="number"
+                    android:hint="60" />
+
+                <EditText
+                    android:id="@+id/etAltura"
+                    style="@style/input_form"
+                    android:layout_marginStart="8dp"
+                    android:inputType="numberDecimal"
+                    android:hint="1.70" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btCalcular"
+                style="@style/button"
+                android:text="Calcular" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Seu indice é 30"
+            android:textAlignment="center"
+            android:textColor="#AAA"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:id="@+id/tvIMC"/>
+
+        <ImageView
+            android:id="@+id/ivIMCStatus"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/tvIMCStatus"
+            android:layout_below="@id/tvIMC"
+            android:src="@drawable/fem_ideal" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Peso ideal"
+            android:textAlignment="center"
+            android:textColor="#AAA"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/tvIMCStatus"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
